@@ -26,12 +26,12 @@ func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request)
 	}
 
 	movie := data.Movie{
-		ID:       id,
-		CretedAt: time.Now(),
-		Title:    "1942",
-		Runtime:  102,
-		Genres:   []string{"History", "War"},
-		Version:  1,
+		ID:        id,
+		CreatedAt: time.Now(),
+		Title:     "1942",
+		Runtime:   102,
+		Genres:    []string{"History", "War"},
+		Version:   1,
 	}
 
 	err = app.writeJSON(w, http.StatusOK, movie, nil)
